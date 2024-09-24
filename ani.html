@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Animation</title>
+    <style>
+        @keyframes swirl {
+            0% {
+                width: 100px;
+                height: 100px;
+                background-color: #8e44ad;
+                border-radius: 50%;
+                transform: rotate(0deg) scale(1);
+            }
+            25% {
+                width: 120px;
+                height: 120px;
+                background-color: #3498db;
+                transform: rotate(90deg) scale(1.2);
+            }
+            50% {
+                width: 150px;
+                height: 150px;
+                background-color: #e74c3c;
+                transform: rotate(180deg) scale(1.4);
+            }
+            75% {
+                width: 120px;
+                height: 120px;
+                background-color: #2ecc71;
+                transform: rotate(270deg) scale(1.2);
+            }
+            100% {
+                width: 100px;
+                height: 100px;
+                background-color: #f1c40f;
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        .z {
+            animation-name: swirl;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            display: inline-block; /* Keeps it centered */
+            margin: auto;
+            position: relative; /* Required for rotation */
+        }
+    </style>
+</head>
+<body>
+    <div class="z"></div>
+</body>
+</html>
